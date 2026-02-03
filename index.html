@@ -1,1318 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini AMOUR — Valentine's Day Perfume Gift Sets | UAE</title>
-    <meta name="description" content="Luxury perfume gift sets for Valentine's Day. Prada, Dior, Chanel, YSL. Free delivery across UAE. Order before Feb 12.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Mini AMOUR — Valentine's Day Perfume Gift Sets">
-    <meta property="og:description" content="Luxury perfume gift sets delivered across UAE. The perfect Valentine's gift.">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💝</text></svg>">
-
-    <!-- Google Fonts - Elegant serif + clean sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* ========== CSS VARIABLES ========== */
-        :root {
-            /* Colors extracted from product photos */
-            --burgundy: #4A1A2C;
-            --burgundy-light: #5C2434;
-            --burgundy-dark: #3A1422;
-            --gold: #D4AF37;
-            --gold-light: #E5C565;
-            --gold-dark: #C5A055;
-            --cream: #FAF7F2;
-            --cream-dark: #F0EBE3;
-            --peach: #E8A87C;
-            --rose: #D4956A;
-            --dusty-rose: #C9A0A0;
-            --black: #1A1A1A;
-            --gray: #6B6B6B;
-            --white: #FFFFFF;
-
-            /* Typography */
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Inter', -apple-system, sans-serif;
-        }
-
-        /* ========== RESET & BASE ========== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            font-family: var(--font-body);
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--black);
-            background: var(--cream);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-
-        /* ========== TYPOGRAPHY ========== */
-        .font-display {
-            font-family: var(--font-display);
-        }
-
-        /* ========== STICKY HEADER ========== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: var(--cream);
-            border-bottom: 1px solid rgba(74, 26, 44, 0.1);
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .header.scrolled {
-            box-shadow: 0 2px 20px rgba(74, 26, 44, 0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: baseline;
-            gap: 6px;
-        }
-
-        .logo-mini {
-            font-family: var(--font-display);
-            font-style: italic;
-            font-size: 18px;
-            color: var(--burgundy);
-        }
-
-        .logo-amour {
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 20px;
-            letter-spacing: 0.1em;
-            color: var(--burgundy);
-        }
-
-        .header-cta {
-            background: var(--burgundy);
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 14px;
-            padding: 10px 20px;
-            border-radius: 100px;
-            transition: all 0.2s ease;
-        }
-
-        .header-cta:active {
-            transform: scale(0.96);
-        }
-
-        /* ========== HERO SECTION ========== */
-        .hero {
-            padding: 80px 20px 40px;
-            text-align: center;
-            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--burgundy);
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 100px;
-            margin-bottom: 24px;
-            letter-spacing: 0.05em;
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--burgundy);
-            margin-bottom: 16px;
-        }
-
-        .hero p {
-            color: var(--gray);
-            font-size: 16px;
-            margin-bottom: 32px;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Countdown */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 32px;
-        }
-
-        .countdown-item {
-            background: var(--burgundy);
-            color: var(--white);
-            padding: 12px 8px;
-            border-radius: 12px;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .countdown-number {
-            font-family: var(--font-display);
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--gold);
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            opacity: 0.8;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: var(--gold);
-            color: var(--burgundy);
-            font-weight: 700;
-            font-size: 18px;
-            padding: 18px 40px;
-            border-radius: 100px;
-            width: 100%;
-            max-width: 320px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .hero-cta:active {
-            transform: scale(0.98);
-        }
-
-        .trust-line {
-            margin-top: 24px;
-            font-size: 13px;
-            color: var(--gray);
-        }
-
-        .trust-line span {
-            margin: 0 8px;
-            opacity: 0.5;
-        }
-
-        /* ========== PRODUCTS SECTION ========== */
-        .products {
-            padding: 40px 0;
-        }
-
-        .products-header {
-            text-align: center;
-            padding: 0 20px 32px;
-        }
-
-        .products-header h2 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 500;
-            color: var(--burgundy);
-            margin-bottom: 8px;
-        }
-
-        .products-header p {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-        /* Product Card */
-        .product-card {
-            background: var(--white);
-            margin: 0 16px 24px;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 4px 30px rgba(74, 26, 44, 0.08);
-        }
-
-        .product-image {
-            position: relative;
-            aspect-ratio: 1;
-            overflow: hidden;
-            background: var(--cream-dark);
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            background: var(--burgundy);
-            color: var(--gold);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 12px;
-            border-radius: 100px;
-            letter-spacing: 0.05em;
-        }
-
-        .product-badge.for-her {
-            background: var(--dusty-rose);
-            color: var(--white);
-        }
-
-        .product-badge.for-him {
-            background: var(--black);
-            color: var(--gold);
-        }
-
-        .product-info {
-            padding: 24px 20px;
-        }
-
-        .product-brand {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 4px;
-        }
-
-        .product-name {
-            font-family: var(--font-display);
-            font-size: 24px;
-            font-weight: 500;
-            color: var(--burgundy);
-            margin-bottom: 8px;
-        }
-
-        .product-desc {
-            font-size: 14px;
-            color: var(--gray);
-            margin-bottom: 16px;
-            line-height: 1.5;
-        }
-
-        .product-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--cream-dark);
-        }
-
-        .product-price {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--burgundy);
-        }
-
-        .product-price-placeholder {
-            font-size: 14px;
-            color: var(--gray);
-        }
-
-        .product-size {
-            font-size: 13px;
-            color: var(--gray);
-            text-align: right;
-        }
-
-        .product-cta {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .btn-order {
-            background: var(--burgundy);
-            color: var(--white);
-            font-weight: 600;
-            font-size: 16px;
-            padding: 16px 24px;
-            border-radius: 100px;
-            text-align: center;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-order:active {
-            transform: scale(0.98);
-            background: var(--burgundy-dark);
-        }
-
-        .btn-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: var(--gray);
-            font-size: 14px;
-            padding: 12px;
-            border: 1px solid var(--cream-dark);
-            border-radius: 100px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-whatsapp:active {
-            background: var(--cream);
-        }
-
-        .btn-whatsapp svg {
-            color: #25D366;
-        }
-
-        /* ========== TRUST SECTION ========== */
-        .trust {
-            padding: 40px 20px;
-            background: var(--burgundy);
-            text-align: center;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .trust-item {
-            color: var(--white);
-        }
-
-        .trust-item-icon {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .trust-item-text {
-            font-size: 13px;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        /* ========== FAQ SECTION ========== */
-        .faq {
-            padding: 48px 20px;
-        }
-
-        .faq h2 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 500;
-            color: var(--burgundy);
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .faq-list {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--cream-dark);
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--black);
-            text-align: left;
-        }
-
-        .faq-question svg {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            color: var(--burgundy);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.open .faq-question svg {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 200px;
-        }
-
-        .faq-answer p {
-            padding-bottom: 20px;
-            font-size: 14px;
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* ========== FINAL CTA ========== */
-        .final-cta {
-            padding: 48px 20px;
-            background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-family: var(--font-display);
-            font-size: 28px;
-            font-weight: 500;
-            color: var(--white);
-            margin-bottom: 8px;
-        }
-
-        .final-cta p {
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .final-cta .countdown {
-            margin-bottom: 24px;
-        }
-
-        .final-cta .countdown-item {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .final-cta-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: var(--gold);
-            color: var(--burgundy);
-            font-weight: 700;
-            font-size: 18px;
-            padding: 18px 48px;
-            border-radius: 100px;
-            transition: all 0.2s ease;
-        }
-
-        .final-cta-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* ========== FOOTER ========== */
-        .footer {
-            padding: 40px 20px;
-            background: var(--burgundy-dark);
-            text-align: center;
-        }
-
-        .footer-logo {
-            margin-bottom: 24px;
-        }
-
-        .footer-logo .logo-mini,
-        .footer-logo .logo-amour {
-            color: var(--gold);
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 24px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.7);
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--gold);
-        }
-
-        .footer-contact {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--white);
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .footer-contact svg {
-            color: #25D366;
-        }
-
-        .footer-copy {
-            font-size: 12px;
-            color: rgba(255,255,255,0.5);
-        }
-
-        /* ========== FLOATING WHATSAPP ========== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 20px;
-            z-index: 90;
-            width: 56px;
-            height: 56px;
-            background: #25D366;
-            border-radius: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.2s ease;
-        }
-
-        .whatsapp-float:active {
-            transform: scale(0.95);
-        }
-
-        .whatsapp-float svg {
-            width: 28px;
-            height: 28px;
-            color: var(--white);
-        }
-
-        /* ========== MOBILE STICKY BOTTOM CTA ========== */
-        .mobile-bottom-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 80;
-            background: var(--white);
-            padding: 12px 16px;
-            padding-bottom: calc(12px + env(safe-area-inset-bottom));
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .mobile-bottom-cta.visible {
-            transform: translateY(0);
-        }
-
-        .mobile-bottom-cta a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: var(--burgundy);
-            color: var(--white);
-            font-weight: 600;
-            font-size: 16px;
-            padding: 16px 24px;
-            border-radius: 100px;
-        }
-
-        /* ========== DESKTOP STYLES ========== */
-        @media (min-width: 768px) {
-            .header {
-                padding: 16px 40px;
-            }
-
-            .logo-mini {
-                font-size: 22px;
-            }
-
-            .logo-amour {
-                font-size: 24px;
-            }
-
-            .header-cta {
-                font-size: 15px;
-                padding: 12px 28px;
-            }
-
-            .hero {
-                padding: 120px 40px 60px;
-                min-height: 80vh;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-                max-width: 600px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero p {
-                font-size: 18px;
-                max-width: 480px;
-            }
-
-            .countdown-item {
-                padding: 16px 12px;
-                min-width: 80px;
-            }
-
-            .countdown-number {
-                font-size: 32px;
-            }
-
-            .countdown-label {
-                font-size: 11px;
-            }
-
-            .hero-cta {
-                width: auto;
-                padding: 20px 48px;
-            }
-
-            .products-header {
-                padding: 0 40px 48px;
-            }
-
-            .products-header h2 {
-                font-size: 36px;
-            }
-
-            .products-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-                padding: 0 40px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
-            .product-card {
-                margin: 0;
-            }
-
-            .trust-grid {
-                grid-template-columns: repeat(4, 1fr);
-                max-width: 800px;
-            }
-
-            .faq {
-                padding: 64px 40px;
-            }
-
-            .faq h2 {
-                font-size: 36px;
-            }
-
-            .final-cta {
-                padding: 64px 40px;
-            }
-
-            .final-cta h2 {
-                font-size: 36px;
-            }
-
-            .mobile-bottom-cta {
-                display: none;
-            }
-
-            .whatsapp-float {
-                bottom: 32px;
-                right: 32px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .products-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* ========== ANIMATIONS ========== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
-        .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
-        .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
-        .animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini AMOUR — Valentine's Day Designer Perfume Gift Sets | UAE</title>
+  <meta name="description" content="Luxury designer perfume gift sets for Valentine's Day. Prada, Chanel, Dior, YSL & Valentino — curated with love, delivered across the UAE. Order via WhatsApp.">
+  <meta name="theme-color" content="#6B1D2A">
+  <link rel="canonical" href="https://3wdyy.github.io/mini-amour/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mini AMOUR — Valentine's Day Designer Perfume Gift Sets">
+  <meta property="og:description" content="Luxury designer perfume gift sets curated with love. Order via WhatsApp for UAE delivery.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://3wdyy.github.io/mini-amour/">
+  <meta property="og:locale" content="en_AE">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Mini AMOUR",
+    "description": "Valentine's Day designer perfume gift sets curated with love for the UAE market.",
+    "url": "https://3wdyy.github.io/mini-amour/",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Mini AMOUR"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Valentine's Day Perfume Gift Sets",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "name": "Prada Paradoxe Gift Set",
+          "brand": { "@type": "Brand", "name": "Prada" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "Bleu de Chanel Gift Set",
+          "brand": { "@type": "Brand", "name": "Chanel" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "Miss Dior Collection Gift Set",
+          "brand": { "@type": "Brand", "name": "Dior" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "YSL Libre Gift Set",
+          "brand": { "@type": "Brand", "name": "Yves Saint Laurent" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "Dior Sauvage Gift Set",
+          "brand": { "@type": "Brand", "name": "Dior" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "Dior La Collection Privée Gift Set",
+          "brand": { "@type": "Brand", "name": "Dior" },
+          "category": "Perfume Gift Set"
+        },
+        {
+          "@type": "Product",
+          "name": "Valentino Born in Roma Gift Set",
+          "brand": { "@type": "Brand", "name": "Valentino" },
+          "category": "Perfume Gift Set"
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
-    <!-- ========== STICKY HEADER ========== -->
-    <header class="header" id="header">
-        <div class="logo">
-            <span class="logo-mini">Mini</span>
-            <span class="logo-amour">AMOUR</span>
-        </div>
-        <a href="#products" class="header-cta">Shop Now</a>
-    </header>
-
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="hero">
-        <div class="animate-in animate-delay-1">
-            <span class="hero-badge">
-                <span>💝</span>
-                Valentine's Day 2026
-            </span>
-        </div>
-
-        <h1 class="animate-in animate-delay-2">
-            Luxury Perfume<br>Gift Sets
-        </h1>
-
-        <p class="animate-in animate-delay-3">
-            Designer fragrances beautifully boxed and delivered across the UAE
-        </p>
-
-        <div class="countdown animate-in animate-delay-3" id="hero-countdown">
-            <!-- JS will populate -->
-        </div>
-
-        <div class="animate-in animate-delay-4">
-            <a href="#products" class="hero-cta">
-                Shop Gift Sets
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
-            </a>
-        </div>
-
-        <p class="trust-line animate-in animate-delay-4">
-            Free Delivery <span>•</span> Cash on Delivery <span>•</span> 100% Authentic
-        </p>
-    </section>
-
-    <!-- ========== PRODUCTS ========== -->
-    <section class="products" id="products">
-        <div class="products-header">
-            <h2>Choose Your Gift</h2>
-            <p>Curated sets from the world's finest perfume houses</p>
-        </div>
-
-        <div class="products-grid">
-
-            <!-- Product 1: Prada Paradoxe -->
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="images/prada-paradoxe.jpg" alt="Prada Paradoxe Gift Set - Three mini perfumes in mint green box" width="600" height="600" loading="lazy">
-                    <span class="product-badge for-her">For Her</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">Prada</p>
-                    <h3 class="product-name">Paradoxe Trio</h3>
-                    <p class="product-desc">[PLACEHOLDER: Product description - e.g., "Three iconic Prada fragrances in a stunning mint green gift box"]</p>
-                    <div class="product-meta">
-                        <div>
-                            <p class="product-price">[AED XXX]</p>
-                            <p class="product-price-placeholder">Price placeholder</p>
-                        </div>
-                        <p class="product-size">[Size placeholder]<br>e.g., 3 x 10ml</p>
-                    </div>
-                    <div class="product-cta">
-                        <a href="#ORDER_LINK" class="btn-order">
-                            Order Now
-                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Prada%20Paradoxe%20set" class="btn-whatsapp">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 2: Bleu de Chanel -->
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="images/bleu-de-chanel.jpg" alt="Bleu de Chanel Gift Set - Three bottles in black luxury box" width="600" height="600" loading="lazy">
-                    <span class="product-badge for-him">For Him</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">Chanel</p>
-                    <h3 class="product-name">Bleu de Chanel Set</h3>
-                    <p class="product-desc">[PLACEHOLDER: Product description - e.g., "The complete Bleu de Chanel collection in elegant black packaging"]</p>
-                    <div class="product-meta">
-                        <div>
-                            <p class="product-price">[AED XXX]</p>
-                            <p class="product-price-placeholder">Price placeholder</p>
-                        </div>
-                        <p class="product-size">[Size placeholder]<br>e.g., 3 x 25ml</p>
-                    </div>
-                    <div class="product-cta">
-                        <a href="#ORDER_LINK" class="btn-order">
-                            Order Now
-                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Bleu%20de%20Chanel%20set" class="btn-whatsapp">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 3: Dior Women's -->
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="images/dior-collection.jpg" alt="Dior Women's Gift Set - Four mini perfumes in white and gold box" width="600" height="600" loading="lazy">
-                    <span class="product-badge for-her">For Her</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">Dior</p>
-                    <h3 class="product-name">La Collection</h3>
-                    <p class="product-desc">[PLACEHOLDER: Product description - e.g., "Four beloved Dior fragrances including J'adore, Miss Dior & more"]</p>
-                    <div class="product-meta">
-                        <div>
-                            <p class="product-price">[AED XXX]</p>
-                            <p class="product-price-placeholder">Price placeholder</p>
-                        </div>
-                        <p class="product-size">[Size placeholder]<br>e.g., 4 x 5ml</p>
-                    </div>
-                    <div class="product-cta">
-                        <a href="#ORDER_LINK" class="btn-order">
-                            Order Now
-                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Dior%20La%20Collection%20set" class="btn-whatsapp">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 4: YSL Libre -->
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="images/ysl-libre.jpg" alt="YSL Libre Gift Set - Perfume and body care in black box" width="600" height="600" loading="lazy">
-                    <span class="product-badge for-her">For Her</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">Yves Saint Laurent</p>
-                    <h3 class="product-name">Libre Gift Set</h3>
-                    <p class="product-desc">[PLACEHOLDER: Product description - e.g., "The iconic Libre fragrance with matching body lotion & wash"]</p>
-                    <div class="product-meta">
-                        <div>
-                            <p class="product-price">[AED XXX]</p>
-                            <p class="product-price-placeholder">Price placeholder</p>
-                        </div>
-                        <p class="product-size">[Size placeholder]<br>e.g., 50ml + 2 x 50ml</p>
-                    </div>
-                    <div class="product-cta">
-                        <a href="#ORDER_LINK" class="btn-order">
-                            Order Now
-                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20YSL%20Libre%20set" class="btn-whatsapp">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 5: Dior Sauvage -->
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="images/dior-sauvage.jpg" alt="Dior Sauvage Gift Set - Three items in black and gold box" width="600" height="600" loading="lazy">
-                    <span class="product-badge for-him">For Him</span>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">Dior</p>
-                    <h3 class="product-name">Sauvage Gift Set</h3>
-                    <p class="product-desc">[PLACEHOLDER: Product description - e.g., "The iconic Sauvage fragrance with shower gel in a premium gift box"]</p>
-                    <div class="product-meta">
-                        <div>
-                            <p class="product-price">[AED XXX]</p>
-                            <p class="product-price-placeholder">Price placeholder</p>
-                        </div>
-                        <p class="product-size">[Size placeholder]<br>e.g., 100ml + 50ml + 10ml</p>
-                    </div>
-                    <div class="product-cta">
-                        <a href="#ORDER_LINK" class="btn-order">
-                            Order Now
-                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Dior%20Sauvage%20set" class="btn-whatsapp">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                            </svg>
-                            Order via WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- ========== TRUST SECTION ========== -->
-    <section class="trust">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="trust-item-icon">🚚</div>
-                <p class="trust-item-text">Free Delivery<br>All UAE Emirates</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-item-icon">💳</div>
-                <p class="trust-item-text">Cash on Delivery<br>Available</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-item-icon">✓</div>
-                <p class="trust-item-text">100% Authentic<br>Guaranteed</p>
-            </div>
-            <div class="trust-item">
-                <div class="trust-item-icon">🎁</div>
-                <p class="trust-item-text">Gift-Ready<br>Packaging</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FAQ ========== -->
-    <section class="faq" id="faq">
-        <h2>Questions?</h2>
-        <div class="faq-list">
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    When will my order arrive?
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Free delivery within 2-3 business days across all UAE emirates. Order by February 12th for guaranteed Valentine's Day delivery.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Can I pay Cash on Delivery?
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes! We offer COD across the UAE. A small AED 10 COD fee applies. You can also pay by card or Apple Pay.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Are these perfumes authentic?
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Absolutely. All products are 100% authentic, sourced from authorized UAE distributors, and come sealed in original packaging.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Can I add a gift message?
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>Yes — include a handwritten note card with your gift at no extra charge. Just add your message during checkout.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ========== FINAL CTA ========== -->
-    <section class="final-cta">
-        <h2>Valentine's Day is Almost Here</h2>
-        <p>Order now for guaranteed delivery before February 14th</p>
-
-        <div class="countdown" id="final-countdown">
-            <!-- JS will populate -->
-        </div>
-
-        <a href="#products" class="final-cta-btn">
-            Shop Gift Sets
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-            </svg>
-        </a>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="footer-logo">
-            <span class="logo-mini">Mini</span>
-            <span class="logo-amour">AMOUR</span>
-        </div>
-
-        <nav class="footer-links">
-            <a href="#products">Shop</a>
-            <a href="#faq">FAQs</a>
-            <a href="https://wa.me/971XXXXXXXXX">Contact</a>
-        </nav>
-
-        <a href="https://wa.me/971XXXXXXXXX" class="footer-contact">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Chat with us on WhatsApp
-        </a>
-
-        <p class="footer-copy">
-            © 2026 Mini AMOUR. All rights reserved.<br>
-            Free delivery across the UAE 🇦🇪
-        </p>
-    </footer>
-
-    <!-- ========== FLOATING WHATSAPP ========== -->
-    <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20Mini%20AMOUR%20Valentine's%20gift%20sets" class="whatsapp-float" aria-label="Contact on WhatsApp">
-        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
-    <!-- ========== MOBILE BOTTOM CTA ========== -->
-    <div class="mobile-bottom-cta" id="mobile-cta">
-        <a href="#products">
-            Shop Gift Sets
-            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-            </svg>
-        </a>
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Mini AMOUR home">
+        <span class="logo-text">Mini AMOUR</span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#products" class="nav-link">Gift Sets</a></li>
+          <li><a href="#bundles" class="nav-link">Bundles</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-sm btn-primary header-cta" id="header-whatsapp" aria-label="Order on WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Order Now</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
     </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#products" class="mobile-nav-link">Gift Sets</a></li>
+        <li><a href="#bundles" class="mobile-nav-link">Bundles</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+      </ul>
+      <a href="#" class="btn btn-primary mobile-cta" id="mobile-whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order on WhatsApp
+      </a>
+    </div>
+  </header>
 
-    <!-- ========== JAVASCRIPT ========== -->
-    <script>
-        // Countdown Timer
-        function initCountdown() {
-            const valentinesDay = new Date('February 14, 2026 00:00:00 GMT+0400').getTime();
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">Valentine's Day 2026 — UAE Exclusive</p>
+        <h1 class="hero-title reveal">Luxury Perfume<br><em>Gift Sets</em></h1>
+        <p class="hero-subtitle reveal">Designer fragrances wrapped in love. Prada, Chanel, Dior, YSL & Valentino — curated for the one who deserves everything.</p>
+        <div class="hero-actions reveal">
+          <a href="#products" class="btn btn-primary btn-lg">Shop Gift Sets</a>
+          <a href="#" class="btn btn-outline btn-lg" id="hero-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Us
+          </a>
+        </div>
+        <div class="hero-countdown reveal" id="countdown" aria-label="Countdown to Valentine's Day">
+          <div class="countdown-item">
+            <span class="countdown-num" id="countdown-days">--</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="countdown-hours">--</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="countdown-mins">--</span>
+            <span class="countdown-label">Mins</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="countdown-num" id="countdown-secs">--</span>
+            <span class="countdown-label">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            function updateCountdown(containerId) {
-                const container = document.getElementById(containerId);
-                if (!container) return;
+  <!-- ==================== TRUST BAR ==================== -->
+  <section class="trust-bar" aria-label="Trust indicators">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>100% Authentic</span>
+        </div>
+        <div class="trust-item reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>UAE-Wide Delivery</span>
+        </div>
+        <div class="trust-item reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Gift-Wrapped Free</span>
+        </div>
+        <div class="trust-item reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>WhatsApp Ordering</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                const now = new Date().getTime();
-                const distance = valentinesDay - now;
+  <!-- ==================== PRODUCTS ==================== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Designer Gift Sets</h2>
+        <p class="section-subtitle">Each set is hand-curated and beautifully gift-wrapped, ready to make someone's Valentine's Day unforgettable.</p>
+      </div>
 
-                if (distance < 0) {
-                    container.innerHTML = '<span style="color: var(--gold); font-size: 18px;">Happy Valentine\'s Day! 💝</span>';
-                    return;
-                }
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal" role="tablist" aria-label="Filter products by gender">
+        <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="her">For Her</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="him">For Him</button>
+      </div>
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      <!-- Product Grid -->
+      <div class="product-grid" id="product-grid">
 
-                container.innerHTML = `
-                    <div class="countdown-item">
-                        <span class="countdown-number">${days}</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number">${hours}</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number">${String(minutes).padStart(2, '0')}</span>
-                        <span class="countdown-label">Min</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number">${String(seconds).padStart(2, '0')}</span>
-                        <span class="countdown-label">Sec</span>
-                    </div>
-                `;
-            }
+        <!-- Product 1: Prada Paradoxe -->
+        <article class="product-card reveal" data-gender="her">
+          <div class="product-img-wrap">
+            <img src="images/prada-paradoxe.jpg" alt="Prada Paradoxe perfume gift set with box" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge">For Her</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Prada</p>
+            <h3 class="product-name">Paradoxe Gift Set</h3>
+            <p class="product-desc">A bold, amber floral — refillable EDP with travel spray and body lotion in a signature gift box.</p>
+            <div class="product-meta">
+              <span class="product-size">EDP 90ml + 10ml + Body Lotion</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Prada Paradoxe Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-            updateCountdown('hero-countdown');
-            updateCountdown('final-countdown');
+        <!-- Product 2: Bleu de Chanel -->
+        <article class="product-card reveal" data-gender="him">
+          <div class="product-img-wrap">
+            <img src="images/bleu-de-chanel.jpg" alt="Bleu de Chanel perfume gift set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge badge-him">For Him</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Chanel</p>
+            <h3 class="product-name">Bleu de Chanel Gift Set</h3>
+            <p class="product-desc">Woody, aromatic sophistication — EDP with after-shave balm and deodorant in a sleek Chanel box.</p>
+            <div class="product-meta">
+              <span class="product-size">EDP 100ml + After-Shave + Deo</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Bleu de Chanel Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-            setInterval(() => {
-                updateCountdown('hero-countdown');
-                updateCountdown('final-countdown');
-            }, 1000);
-        }
+        <!-- Product 3: Miss Dior Collection -->
+        <article class="product-card reveal" data-gender="her">
+          <div class="product-img-wrap">
+            <img src="images/dior-collection.jpg" alt="Miss Dior perfume collection gift set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge">For Her</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Dior</p>
+            <h3 class="product-name">Miss Dior Collection Set</h3>
+            <p class="product-desc">The iconic Miss Dior trio — Blooming Bouquet, Rose N'Roses, and Miss Dior EDP miniatures in a couture box.</p>
+            <div class="product-meta">
+              <span class="product-size">3 x 30ml Miniatures</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Miss Dior Collection Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-        // Header scroll effect
-        function initHeader() {
-            const header = document.getElementById('header');
-            let lastScroll = 0;
+        <!-- Product 4: YSL Libre -->
+        <article class="product-card reveal" data-gender="her">
+          <div class="product-img-wrap">
+            <img src="images/ysl-libre.jpg" alt="YSL Libre perfume gift set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge">For Her</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Yves Saint Laurent</p>
+            <h3 class="product-name">Libre Gift Set</h3>
+            <p class="product-desc">Freedom in a bottle — lavender & orange blossom EDP with luxurious body lotion and travel size.</p>
+            <div class="product-meta">
+              <span class="product-size">EDP 50ml + 10ml + Body Lotion</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="YSL Libre Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
+        <!-- Product 5: Dior Sauvage -->
+        <article class="product-card reveal" data-gender="him">
+          <div class="product-img-wrap">
+            <img src="images/dior-sauvage.jpg" alt="Dior Sauvage perfume gift set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge badge-him">For Him</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Dior</p>
+            <h3 class="product-name">Sauvage Gift Set</h3>
+            <p class="product-desc">Raw, magnetic intensity — Sauvage EDP with shower gel and travel spray in Dior's iconic packaging.</p>
+            <div class="product-meta">
+              <span class="product-size">EDP 100ml + Shower Gel + 10ml</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Dior Sauvage Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-                if (currentScroll > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
+        <!-- Product 6: Dior La Collection Privée -->
+        <article class="product-card reveal" data-gender="her">
+          <div class="product-img-wrap">
+            <img src="images/dior-collection-privee.jpg" alt="Dior La Collection Privée luxury perfume set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge badge-luxe">Prestige</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Dior</p>
+            <h3 class="product-name">La Collection Privée Set</h3>
+            <p class="product-desc">Haute couture fragrance — five exquisite Maison Christian Dior miniatures in a collector's coffret.</p>
+            <div class="product-meta">
+              <span class="product-size">5 x 7.5ml Miniatures</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Dior La Collection Privée Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-                lastScroll = currentScroll;
-            });
-        }
+        <!-- Product 7: Valentino Born in Roma -->
+        <article class="product-card reveal" data-gender="her">
+          <div class="product-img-wrap">
+            <img src="images/valentino-born-in-roma.jpg" alt="Valentino Born in Roma perfume gift set" class="product-img" loading="lazy" width="400" height="400">
+            <span class="product-badge">For Her</span>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Valentino</p>
+            <h3 class="product-name">Born in Roma Gift Set</h3>
+            <p class="product-desc">Roman glamour meets jasmine & vanilla — EDP with body lotion and purse spray in Valentino's studded box.</p>
+            <div class="product-meta">
+              <span class="product-size">EDP 50ml + Body Lotion + 15ml</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">AED <span class="price-amount">TBD</span></span>
+              <a href="#" class="btn btn-primary btn-sm product-cta" data-product="Valentino Born in Roma Gift Set" data-price="TBD">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
 
-        // Mobile bottom CTA
-        function initMobileCTA() {
-            const mobileCTA = document.getElementById('mobile-cta');
-            const hero = document.getElementById('hero');
+      </div>
+    </div>
+  </section>
 
-            if (!mobileCTA || !hero) return;
+  <!-- ==================== BUNDLES ==================== -->
+  <section class="bundles" id="bundles">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Valentine's Bundles</h2>
+        <p class="section-subtitle">Save more when you gift a curated bundle. Each one is wrapped and ready with a handwritten card.</p>
+      </div>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        mobileCTA.classList.remove('visible');
-                    } else {
-                        mobileCTA.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0 });
+      <div class="bundle-grid">
 
-            observer.observe(hero);
-        }
+        <!-- Bundle 1: His & Hers -->
+        <article class="bundle-card reveal">
+          <div class="bundle-badge">Most Popular</div>
+          <h3 class="bundle-name">His & Hers</h3>
+          <p class="bundle-desc">The perfect pair — one for her, one for him. Bleu de Chanel + YSL Libre, beautifully dual-wrapped.</p>
+          <ul class="bundle-includes">
+            <li>Bleu de Chanel Gift Set</li>
+            <li>YSL Libre Gift Set</li>
+            <li>Dual gift wrapping</li>
+            <li>Handwritten card</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-original">AED <span>TBD</span></span>
+            <span class="bundle-price">AED <span class="price-amount">TBD</span></span>
+            <span class="bundle-save">Save AED TBD</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-block bundle-cta" data-bundle="His &amp; Hers Bundle" data-price="TBD">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order This Bundle
+          </a>
+        </article>
 
-        // FAQ Accordion
-        function initFAQ() {
-            const faqItems = document.querySelectorAll('.faq-item');
+        <!-- Bundle 2: Discovery Edit -->
+        <article class="bundle-card reveal">
+          <h3 class="bundle-name">The Discovery Edit</h3>
+          <p class="bundle-desc">Can't decide? Gift the experience of discovery — three miniature sets spanning floral, woody, and oriental families.</p>
+          <ul class="bundle-includes">
+            <li>Miss Dior Collection Set</li>
+            <li>Dior La Collection Privée Set</li>
+            <li>Valentino Born in Roma Gift Set</li>
+            <li>Premium gift box</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-original">AED <span>TBD</span></span>
+            <span class="bundle-price">AED <span class="price-amount">TBD</span></span>
+            <span class="bundle-save">Save AED TBD</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-block bundle-cta" data-bundle="Discovery Edit Bundle" data-price="TBD">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order This Bundle
+          </a>
+        </article>
 
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
+        <!-- Bundle 3: Ultimate Valentine's -->
+        <article class="bundle-card reveal">
+          <div class="bundle-badge badge-luxe">Luxe</div>
+          <h3 class="bundle-name">Ultimate Valentine's</h3>
+          <p class="bundle-desc">Go all out — the grand gesture. Prada Paradoxe + Dior Sauvage + Dior La Collection Privée in a luxury hamper.</p>
+          <ul class="bundle-includes">
+            <li>Prada Paradoxe Gift Set</li>
+            <li>Dior Sauvage Gift Set</li>
+            <li>Dior La Collection Privée Set</li>
+            <li>Luxury hamper packaging</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-original">AED <span>TBD</span></span>
+            <span class="bundle-price">AED <span class="price-amount">TBD</span></span>
+            <span class="bundle-save">Save AED TBD</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-block bundle-cta" data-bundle="Ultimate Valentine's Bundle" data-price="TBD">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order This Bundle
+          </a>
+        </article>
 
-                question.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
+      </div>
+    </div>
+  </section>
 
-                    // Close all
-                    faqItems.forEach(i => i.classList.remove('open'));
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
 
-                    // Open clicked if wasn't open
-                    if (!isOpen) {
-                        item.classList.add('open');
-                    }
-                });
-            });
-        }
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary class="faq-question">Are all perfumes 100% authentic?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. Every product is sourced from authorized distributors and comes with original packaging, batch codes, and manufacturer seals. We guarantee 100% authenticity on every item.</p>
+          </div>
+        </details>
 
-        // Smooth scroll
-        function initSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href.length > 1 && !href.includes('ORDER')) {
-                        e.preventDefault();
-                        const target = document.querySelector(href);
-                        if (target) {
-                            const headerOffset = 70;
-                            const elementPosition = target.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        <details class="faq-item reveal">
+          <summary class="faq-question">How does ordering via WhatsApp work?</summary>
+          <div class="faq-answer">
+            <p>Simply tap the "Order Now" button on any product or bundle. It opens a pre-filled WhatsApp message to our team. We'll confirm availability, arrange payment, and schedule delivery — all through chat.</p>
+          </div>
+        </details>
 
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-        }
+        <details class="faq-item reveal">
+          <summary class="faq-question">Where do you deliver?</summary>
+          <div class="faq-answer">
+            <p>We deliver across all seven emirates in the UAE. Dubai and Abu Dhabi orders typically arrive within 24 hours. Other emirates within 2-3 business days.</p>
+          </div>
+        </details>
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            initCountdown();
-            initHeader();
-            initMobileCTA();
-            initFAQ();
-            initSmoothScroll();
-        });
-    </script>
+        <details class="faq-item reveal">
+          <summary class="faq-question">Is gift wrapping included?</summary>
+          <div class="faq-answer">
+            <p>Yes! Every order comes beautifully gift-wrapped at no extra charge. Bundles include premium packaging with a handwritten card. Just tell us the recipient's name and your message.</p>
+          </div>
+        </details>
 
+        <details class="faq-item reveal">
+          <summary class="faq-question">What payment methods do you accept?</summary>
+          <div class="faq-answer">
+            <p>We accept bank transfers, cash on delivery (COD), and card payments via payment link. Our team will discuss the best option for you on WhatsApp.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary class="faq-question">Can I return or exchange a product?</summary>
+          <div class="faq-answer">
+            <p>Due to the nature of perfume products, we cannot accept returns on opened items. However, if you receive a damaged or incorrect product, we'll replace it immediately. Contact us within 24 hours of delivery.</p>
+          </div>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary class="faq-question">Will my order arrive before Valentine's Day?</summary>
+          <div class="faq-answer">
+            <p>Orders placed by February 12th are guaranteed to arrive by Valentine's Day. We recommend ordering early as gift sets sell out quickly. Express same-day delivery is available in Dubai for last-minute orders.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="cta-title">Make This Valentine's<br><em>Unforgettable</em></h2>
+        <p class="cta-subtitle">Don't wait — our curated gift sets sell out fast. Tap below to order on WhatsApp and we'll handle the rest.</p>
+        <a href="#" class="btn btn-primary btn-lg cta-btn" id="final-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+        <p class="cta-note">Free gift wrapping on every order</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-text">Mini AMOUR</span>
+          <p class="footer-tagline">Luxury perfume gift sets,<br>curated with love.</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="#products">Gift Sets</a></li>
+            <li><a href="#bundles">Bundles</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.71a8.21 8.21 0 0 0 4.76 1.51V6.77a4.83 4.83 0 0 1-1-.08z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp" id="footer-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mini AMOUR. All rights reserved. Valentine's Day pop-up — UAE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" class="floating-whatsapp" id="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/whatsapp.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

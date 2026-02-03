@@ -1,0 +1,111 @@
+/* ============================================
+   MINI AMOUR — Animations & Transitions
+   ============================================ */
+
+/* ---- Scroll Reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--dur-reveal) var(--ease-out),
+              transform var(--dur-reveal) var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children in grids */
+.product-card.reveal:nth-child(2) { transition-delay: 100ms; }
+.product-card.reveal:nth-child(3) { transition-delay: 200ms; }
+.product-card.reveal:nth-child(4) { transition-delay: 150ms; }
+.product-card.reveal:nth-child(5) { transition-delay: 250ms; }
+.product-card.reveal:nth-child(6) { transition-delay: 200ms; }
+.product-card.reveal:nth-child(7) { transition-delay: 300ms; }
+
+.bundle-card.reveal:nth-child(2) { transition-delay: 100ms; }
+.bundle-card.reveal:nth-child(3) { transition-delay: 200ms; }
+
+.trust-item.reveal:nth-child(2) { transition-delay: 80ms; }
+.trust-item.reveal:nth-child(3) { transition-delay: 160ms; }
+.trust-item.reveal:nth-child(4) { transition-delay: 240ms; }
+
+/* ---- Floating WhatsApp pulse ---- */
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4),
+                0 0 0 12px rgba(37, 211, 102, 0.1);
+  }
+  100% {
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4),
+                0 0 0 24px rgba(37, 211, 102, 0);
+  }
+}
+
+.floating-whatsapp {
+  animation: wa-pulse 3s var(--ease-in-out) infinite;
+}
+
+/* ---- Countdown number flip hint ---- */
+@keyframes count-tick {
+  0%   { transform: translateY(0);   opacity: 1; }
+  40%  { transform: translateY(-4px); opacity: 0.6; }
+  100% { transform: translateY(0);   opacity: 1; }
+}
+
+.countdown-num.tick {
+  animation: count-tick 400ms var(--ease-out);
+}
+
+/* ---- Product card image shimmer (loading placeholder) ---- */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.product-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  background-size: 400px 100%;
+  animation: shimmer 1.5s infinite;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity var(--dur-base);
+  pointer-events: none;
+}
+
+.product-img-wrap.loaded::before {
+  opacity: 0;
+}
+
+/* ---- FAQ accordion animation ---- */
+.faq-answer {
+  overflow: hidden;
+}
+
+/* ---- Hero content stagger ---- */
+.hero .reveal:nth-child(1) { transition-delay: 0ms; }
+.hero .reveal:nth-child(2) { transition-delay: 100ms; }
+.hero .reveal:nth-child(3) { transition-delay: 200ms; }
+.hero .reveal:nth-child(4) { transition-delay: 300ms; }
+.hero .reveal:nth-child(5) { transition-delay: 400ms; }
+
+/* ---- Mobile menu link stagger ---- */
+.mobile-menu.open .mobile-nav-link {
+  animation: menu-fade-in var(--dur-base) var(--ease-out) forwards;
+  opacity: 0;
+}
+
+@keyframes menu-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu.open li:nth-child(1) .mobile-nav-link { animation-delay: 50ms; }
+.mobile-menu.open li:nth-child(2) .mobile-nav-link { animation-delay: 100ms; }
+.mobile-menu.open li:nth-child(3) .mobile-nav-link { animation-delay: 150ms; }
