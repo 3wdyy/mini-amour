@@ -1,5 +1,6 @@
 /* ============================================
    MINI AMOUR — Animations & Transitions
+   "Midnight Luxe" dark mode
    ============================================ */
 
 /* ---- Scroll Reveal ---- */
@@ -29,6 +30,9 @@
 .trust-item.reveal:nth-child(2) { transition-delay: 80ms; }
 .trust-item.reveal:nth-child(3) { transition-delay: 160ms; }
 .trust-item.reveal:nth-child(4) { transition-delay: 240ms; }
+
+.guide-card:nth-child(2) { transition-delay: 80ms; }
+.guide-card:nth-child(3) { transition-delay: 160ms; }
 
 /* ---- Floating WhatsApp pulse ---- */
 @keyframes wa-pulse {
@@ -70,7 +74,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
   background-size: 400px 100%;
   animation: shimmer 1.5s infinite;
   z-index: 1;
@@ -109,3 +113,24 @@
 .mobile-menu.open li:nth-child(1) .mobile-nav-link { animation-delay: 50ms; }
 .mobile-menu.open li:nth-child(2) .mobile-nav-link { animation-delay: 100ms; }
 .mobile-menu.open li:nth-child(3) .mobile-nav-link { animation-delay: 150ms; }
+
+/* ---- Gold shimmer on section dividers ---- */
+@keyframes gold-shimmer {
+  0%   { left: -100%; }
+  100% { left: 200%; }
+}
+
+.section-header::after {
+  overflow: hidden;
+}
+
+/* ---- Button glow pulse (idle) ---- */
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 0 0 rgba(201, 165, 92, 0); }
+  50%      { box-shadow: 0 0 20px rgba(201, 165, 92, 0.15); }
+}
+
+.hero .btn-primary,
+.cta-btn {
+  animation: btn-glow 4s var(--ease-in-out) infinite;
+}

@@ -1,8 +1,7 @@
 /* ============================================
    MINI AMOUR — Base / Reset / Typography
-   Color palette: wine/burgundy tones from
-   product photography (deep velvet, warm
-   peach-amber glow, gold hearts, dusty roses)
+   "Midnight Luxe" dark mode with Cormorant
+   Garamond display + DM Sans body
    ============================================ */
 
 /* ---- Modern Reset ---- */
@@ -25,8 +24,8 @@ body {
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   line-height: var(--lh-base);
-  color: var(--clr-gray-900);
-  background-color: var(--clr-cream);
+  color: var(--clr-silver);
+  background-color: var(--clr-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -71,9 +70,9 @@ button {
 /* ---- Typography ---- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-display);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-light);
   line-height: var(--lh-tight);
-  color: var(--clr-black);
+  color: var(--clr-champagne);
 }
 
 h1 {
@@ -83,14 +82,17 @@ h1 {
 
 h2 {
   font-size: var(--fs-2xl);
+  font-weight: var(--fw-regular);
 }
 
 h3 {
   font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
 }
 
 h4 {
   font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
 }
 
 p {
@@ -111,8 +113,8 @@ strong {
 
 /* ---- Selection ---- */
 ::selection {
-  background-color: var(--clr-wine-mid);
-  color: var(--clr-white);
+  background-color: var(--clr-violet);
+  color: var(--clr-ivory);
 }
 
 /* ---- Focus visible ---- */

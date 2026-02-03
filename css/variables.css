@@ -1,53 +1,67 @@
 /* ============================================
    MINI AMOUR — Design System Variables
-   Color palette extracted from product photography:
-   Deep wine velvet, warm peach-amber glow,
-   gold hearts, dusty roses, scattered petals
+   "Midnight Luxe" — Dark mode with gold,
+   violet, and rose accents. Inspired by
+   Tom Ford, Byredo, and Dior noir aesthetics.
    ============================================ */
 
 :root {
-  /* ---- Brand Colors (from product photos) ---- */
-  --clr-wine:           #4A1525;    /* deep velvet fabric */
-  --clr-wine-dark:      #2E0D18;    /* darkest velvet shadows */
-  --clr-wine-mid:       #5B1A2A;    /* mid-tone burgundy */
-  --clr-wine-light:     #7B2D3F;    /* lighter wine */
-  --clr-gold:           #C9A54E;    /* gold heart chocolates */
-  --clr-gold-light:     #D4BA6A;    /* lighter gold accents */
-  --clr-gold-dark:      #A8893A;    /* aged gold */
-  --clr-rose-gold:      #C4847A;    /* rose/peach warmth */
-  --clr-peach:          #D4956B;    /* warm peach glow */
-  --clr-dusty-rose:     #B8787E;    /* rose petals */
+  /* ---- Core Dark Palette ---- */
+  --clr-bg:             #0A0A0F;    /* near-black with blue undertone */
+  --clr-surface:        #141419;    /* elevated surface */
+  --clr-card:           #1C1C24;    /* card/panel surface */
+  --clr-border:         #2A2A35;    /* subtle dividers */
+  --clr-border-light:   rgba(255, 255, 255, 0.06);
 
-  /* ---- Neutrals ---- */
-  --clr-cream:          #FBF6EF;    /* warm ivory */
-  --clr-cream-dark:     #F0E8DA;    /* darker warm cream */
-  --clr-white:          #FFFFFF;
-  --clr-black:          #1A1A1A;
-  --clr-gray-900:       #2D2D2D;
-  --clr-gray-700:       #555555;
-  --clr-gray-500:       #888888;
-  --clr-gray-300:       #C4C4C4;
-  --clr-gray-100:       #F0F0F0;
+  /* ---- Gold Spectrum ---- */
+  --clr-gold:           #C9A55C;    /* primary gold accent */
+  --clr-gold-light:     #E2C87E;    /* hover / highlight */
+  --clr-gold-muted:     #8B7A4A;    /* subtle secondary gold */
+  --clr-gold-dark:      #A8893A;    /* aged gold */
+
+  /* ---- Vibrant Accents ---- */
+  --clr-violet:         #8B5CF6;    /* modern pop accent */
+  --clr-violet-soft:    rgba(139, 92, 246, 0.15);
+  --clr-rose:           #E8447A;    /* warm accent */
+  --clr-rose-soft:      rgba(232, 68, 122, 0.12);
+  --clr-amber:          #F59E0B;    /* energy accent */
+
+  /* ---- Text Colors ---- */
+  --clr-champagne:      #F5E6D0;    /* primary text (warm white) */
+  --clr-ivory:          #FFFDF7;    /* brightest text */
+  --clr-silver:         #A8A4B3;    /* secondary / body text */
+  --clr-muted:          #6B6B7B;    /* tertiary / captions */
+
+  /* ---- Legacy mappings (backward compat) ---- */
+  --clr-white:          #FFFDF7;
+  --clr-black:          #0A0A0F;
 
   /* ---- Semantic ---- */
-  --clr-success:        #25D366;    /* WhatsApp green */
+  --clr-success:        #25D366;
   --clr-error:          #D32F2F;
-  --clr-badge-her:      var(--clr-wine-mid);
-  --clr-badge-him:      #1B3A5C;
-  --clr-badge-unisex:   #4A4A4A;
-  --clr-badge-luxe:     var(--clr-gold-dark);
+  --clr-badge-her:      var(--clr-rose);
+  --clr-badge-him:      #3B82F6;
+  --clr-badge-unisex:   var(--clr-violet);
+  --clr-badge-luxe:     var(--clr-gold);
 
   /* ---- Fragrance Family Colors ---- */
-  --clr-fam-floral:     #C97B8B;
-  --clr-fam-woody:      #8B7355;
-  --clr-fam-oriental:   #B8860B;
-  --clr-fam-fresh:      #6B9F8E;
-  --clr-fam-amber:      #C4883A;
-  --clr-fam-chypre:     #8B6D5C;
+  --clr-fam-floral:     #E879A0;
+  --clr-fam-woody:      #A38B6D;
+  --clr-fam-oriental:   #D4A03C;
+  --clr-fam-fresh:      #6BC4A6;
+  --clr-fam-amber:      #D4883A;
+  --clr-fam-chypre:     #A8816D;
+
+  /* ---- Glass Effects ---- */
+  --glass-bg:           rgba(255, 255, 255, 0.04);
+  --glass-bg-hover:     rgba(255, 255, 255, 0.07);
+  --glass-border:       rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(201, 165, 92, 0.15);
+  --glass-blur:         16px;
 
   /* ---- Typography ---- */
-  --ff-display:         'Playfair Display', Georgia, 'Times New Roman', serif;
-  --ff-body:            'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ff-display:         'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --ff-body:            'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --fs-xs:              0.75rem;
   --fs-sm:              0.875rem;
@@ -56,9 +70,9 @@
   --fs-lg:              1.25rem;
   --fs-xl:              1.5rem;
   --fs-2xl:             2rem;
-  --fs-3xl:             2.5rem;
-  --fs-4xl:             3rem;
-  --fs-5xl:             3.5rem;
+  --fs-3xl:             2.75rem;
+  --fs-4xl:             3.5rem;
+  --fs-5xl:             4.5rem;
 
   --fw-light:           300;
   --fw-regular:         400;
@@ -66,14 +80,16 @@
   --fw-semibold:        600;
   --fw-bold:            700;
 
-  --lh-tight:           1.2;
+  --lh-tight:           1.1;
+  --lh-snug:            1.3;
   --lh-base:            1.6;
-  --lh-relaxed:         1.8;
+  --lh-relaxed:         1.75;
 
   --ls-tight:           -0.02em;
   --ls-normal:          0;
-  --ls-wide:            0.05em;
-  --ls-wider:           0.1em;
+  --ls-wide:            0.06em;
+  --ls-wider:           0.12em;
+  --ls-widest:          0.18em;
 
   /* ---- Spacing ---- */
   --sp-2:               0.125rem;
@@ -104,12 +120,12 @@
   --radius-full:        9999px;
 
   /* ---- Shadows ---- */
-  --shadow-sm:          0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md:          0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg:          0 8px 30px rgba(0, 0, 0, 0.12);
-  --shadow-xl:          0 16px 48px rgba(0, 0, 0, 0.15);
-  --shadow-warm:        0 8px 30px rgba(74, 21, 37, 0.12);
-  --shadow-gold:        0 4px 20px rgba(201, 165, 78, 0.15);
+  --shadow-sm:          0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md:          0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg:          0 8px 30px rgba(0, 0, 0, 0.4);
+  --shadow-xl:          0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-glow-gold:   0 0 30px rgba(201, 165, 92, 0.2), 0 0 60px rgba(201, 165, 92, 0.08);
+  --shadow-glow-violet: 0 0 30px rgba(139, 92, 246, 0.15), 0 0 60px rgba(139, 92, 246, 0.06);
 
   /* ---- Transitions ---- */
   --ease-out:           cubic-bezier(0.25, 0.46, 0.45, 0.94);
