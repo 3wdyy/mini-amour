@@ -28,7 +28,7 @@
 
 .section-title {
   margin-bottom: var(--sp-12);
-  color: var(--clr-burgundy);
+  color: var(--clr-wine);
 }
 
 .section-subtitle {
@@ -74,6 +74,27 @@
 
 .hero-content {
   max-width: 680px;
+}
+
+/* ---- Authenticity section layout ---- */
+.authenticity {
+  padding: var(--sp-40) 0;
+}
+
+.auth-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-20);
+  text-align: center;
+}
+
+/* ---- Gift Guide layout ---- */
+.gift-guide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-16);
+  margin-bottom: var(--sp-40);
 }
 
 /* ---- Product grid ---- */
@@ -133,6 +154,7 @@
 /* ---- Filter tabs layout ---- */
 .filter-tabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--sp-8);
   margin-bottom: var(--sp-32);
@@ -169,6 +191,17 @@
     padding: var(--sp-128) 0 var(--sp-80);
   }
 
+  .auth-inner {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--sp-24);
+  }
+
+  .gift-guide {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-20);
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-32);
@@ -198,6 +231,11 @@
    DESKTOP (1024px+)
    ============================================ */
 @media (min-width: 1024px) {
+  .gift-guide {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-24);
+  }
+
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }

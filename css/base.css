@@ -1,5 +1,8 @@
 /* ============================================
    MINI AMOUR — Base / Reset / Typography
+   Color palette: wine/burgundy tones from
+   product photography (deep velvet, warm
+   peach-amber glow, gold hearts, dusty roses)
    ============================================ */
 
 /* ---- Modern Reset ---- */
@@ -108,7 +111,7 @@ strong {
 
 /* ---- Selection ---- */
 ::selection {
-  background-color: var(--clr-burgundy);
+  background-color: var(--clr-wine-mid);
   color: var(--clr-white);
 }
 
