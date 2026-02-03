@@ -113,7 +113,7 @@ strong {
 
 /* ---- Selection ---- */
 ::selection {
-  background-color: var(--clr-violet);
+  background-color: var(--clr-maroon);
   color: var(--clr-ivory);
 }
 

@@ -143,6 +143,7 @@
   grid-template-columns: 1fr;
   gap: var(--sp-32);
   padding: var(--sp-48) 0 var(--sp-32);
+  text-align: center;
 }
 
 .footer-bottom {
@@ -190,10 +191,6 @@
     display: inline-flex;
   }
 
-  .menu-toggle {
-    display: none;
-  }
-
   .hero {
     padding: var(--sp-128) 0 var(--sp-80);
   }
@@ -227,6 +224,7 @@
   .footer-inner {
     grid-template-columns: 2fr 1fr 1fr;
     gap: var(--sp-48);
+    text-align: left;
   }
 
   .final-cta {

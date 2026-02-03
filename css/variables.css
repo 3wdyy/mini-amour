@@ -20,10 +20,11 @@
   --clr-gold-dark:      #A8893A;    /* aged gold */
 
   /* ---- Vibrant Accents ---- */
-  --clr-violet:         #8B5CF6;    /* modern pop accent */
-  --clr-violet-soft:    rgba(139, 92, 246, 0.15);
-  --clr-rose:           #E8447A;    /* warm accent */
-  --clr-rose-soft:      rgba(232, 68, 122, 0.12);
+  --clr-maroon:         #6B1E3A;    /* deep maroon-pink from product photos */
+  --clr-maroon-light:   #8B2D4F;    /* lighter maroon for hovers */
+  --clr-maroon-soft:    rgba(107, 30, 58, 0.25);
+  --clr-rose:           #C44569;    /* warm rose derived from maroon */
+  --clr-rose-soft:      rgba(196, 69, 105, 0.15);
   --clr-amber:          #F59E0B;    /* energy accent */
 
   /* ---- Text Colors ---- */
@@ -41,7 +42,7 @@
   --clr-error:          #D32F2F;
   --clr-badge-her:      var(--clr-rose);
   --clr-badge-him:      #3B82F6;
-  --clr-badge-unisex:   var(--clr-violet);
+  --clr-badge-unisex:   var(--clr-maroon);
   --clr-badge-luxe:     var(--clr-gold);
 
   /* ---- Fragrance Family Colors ---- */
@@ -125,7 +126,7 @@
   --shadow-lg:          0 8px 30px rgba(0, 0, 0, 0.4);
   --shadow-xl:          0 16px 48px rgba(0, 0, 0, 0.5);
   --shadow-glow-gold:   0 0 30px rgba(201, 165, 92, 0.2), 0 0 60px rgba(201, 165, 92, 0.08);
-  --shadow-glow-violet: 0 0 30px rgba(139, 92, 246, 0.15), 0 0 60px rgba(139, 92, 246, 0.06);
+  --shadow-glow-maroon: 0 0 30px rgba(107, 30, 58, 0.2), 0 0 60px rgba(107, 30, 58, 0.08);
 
   /* ---- Transitions ---- */
   --ease-out:           cubic-bezier(0.25, 0.46, 0.45, 0.94);

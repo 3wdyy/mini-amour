@@ -99,21 +99,6 @@
 .hero .reveal:nth-child(4) { transition-delay: 300ms; }
 .hero .reveal:nth-child(5) { transition-delay: 400ms; }
 
-/* ---- Mobile menu link stagger ---- */
-.mobile-menu.open .mobile-nav-link {
-  animation: menu-fade-in var(--dur-base) var(--ease-out) forwards;
-  opacity: 0;
-}
-
-@keyframes menu-fade-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.mobile-menu.open li:nth-child(1) .mobile-nav-link { animation-delay: 50ms; }
-.mobile-menu.open li:nth-child(2) .mobile-nav-link { animation-delay: 100ms; }
-.mobile-menu.open li:nth-child(3) .mobile-nav-link { animation-delay: 150ms; }
-
 /* ---- Gold shimmer on section dividers ---- */
 @keyframes gold-shimmer {
   0%   { left: -100%; }

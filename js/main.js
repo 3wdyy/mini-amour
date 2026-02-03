@@ -19,7 +19,6 @@
     initWhatsAppLinks();
     initScrollReveal();
     initHeaderScroll();
-    initMobileMenu();
     initProductFilters();
     initCountdown();
     initImageLoad();
@@ -35,7 +34,6 @@
     // General WhatsApp links
     var generalIds = [
       'header-whatsapp',
-      'mobile-whatsapp',
       'hero-whatsapp',
       'final-whatsapp',
       'floating-whatsapp',
@@ -135,45 +133,6 @@
 
     // Run once on load
     updateHeader();
-  }
-
-  // ============================================
-  // Mobile menu toggle
-  // ============================================
-  function initMobileMenu() {
-    var toggle = document.getElementById('menu-toggle');
-    var menu = document.getElementById('mobile-menu');
-    if (!toggle || !menu) return;
-
-    toggle.addEventListener('click', function () {
-      var isOpen = menu.classList.contains('open');
-
-      if (isOpen) {
-        menu.classList.remove('open');
-        menu.setAttribute('aria-hidden', 'true');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      } else {
-        menu.classList.add('open');
-        menu.setAttribute('aria-hidden', 'false');
-        toggle.classList.add('active');
-        toggle.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-
-    // Close menu on link click
-    var mobileLinks = menu.querySelectorAll('.mobile-nav-link');
-    mobileLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        menu.setAttribute('aria-hidden', 'true');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
   }
 
   // ============================================
