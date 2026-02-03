@@ -323,7 +323,25 @@
       }
     });
 
-    // Mobile: show after 45 seconds if user has scrolled
+    // Mobile: detect scroll-up pattern (user scrolling back toward top = leaving intent)
+    var lastScrollY = 0;
+    var scrollUpDistance = 0;
+    var scrollUpThreshold = 300;
+
+    window.addEventListener('scroll', function () {
+      var currentY = window.scrollY;
+      if (currentY < lastScrollY) {
+        scrollUpDistance += lastScrollY - currentY;
+        if (scrollUpDistance > scrollUpThreshold && !shown && hasScrolled) {
+          showPopup();
+        }
+      } else {
+        scrollUpDistance = 0;
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+
+    // Fallback: show after 45 seconds if user has scrolled
     setTimeout(function () {
       if (!shown && hasScrolled) {
         showPopup();
