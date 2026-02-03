@@ -22,6 +22,8 @@
     initProductFilters();
     initCountdown();
     initImageLoad();
+    initGuideCards();
+    initExitIntent();
   });
 
   // ============================================
@@ -37,7 +39,9 @@
       'hero-whatsapp',
       'final-whatsapp',
       'floating-whatsapp',
-      'footer-whatsapp'
+      'footer-whatsapp',
+      'faq-whatsapp',
+      'exit-popup-whatsapp'
     ];
 
     generalIds.forEach(function (id) {
@@ -248,6 +252,102 @@
         });
       }
     });
+  }
+
+  // ============================================
+  // Gift guide cards → filter products
+  // ============================================
+  function initGuideCards() {
+    var guideCards = document.querySelectorAll('[data-guide-filter]');
+    var tabs = document.querySelectorAll('.filter-tab');
+    var cards = document.querySelectorAll('.product-card');
+
+    guideCards.forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        e.preventDefault();
+        var filter = card.getAttribute('data-guide-filter');
+
+        // Update filter tabs
+        tabs.forEach(function (t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+          if (t.getAttribute('data-filter') === filter) {
+            t.classList.add('active');
+            t.setAttribute('aria-selected', 'true');
+          }
+        });
+
+        // Filter cards
+        cards.forEach(function (c) {
+          var gender = c.getAttribute('data-gender');
+          if (filter === 'all' || gender === filter) {
+            c.classList.remove('hidden');
+          } else {
+            c.classList.add('hidden');
+          }
+        });
+
+        // Smooth scroll to products
+        var productsSection = document.getElementById('products');
+        if (productsSection) {
+          productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  // ============================================
+  // Exit-intent popup
+  // ============================================
+  function initExitIntent() {
+    var popup = document.getElementById('exit-popup');
+    var closeBtn = document.getElementById('exit-popup-close');
+    var overlay = document.getElementById('exit-popup-overlay');
+    if (!popup) return;
+
+    var shown = false;
+    var hasScrolled = false;
+
+    // Track if user has scrolled past 30% of page
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > document.body.scrollHeight * 0.3) {
+        hasScrolled = true;
+      }
+    }, { passive: true });
+
+    // Desktop: mouse leaves top of viewport
+    document.addEventListener('mouseout', function (e) {
+      if (shown || !hasScrolled) return;
+      if (e.clientY <= 0 && e.relatedTarget === null) {
+        showPopup();
+      }
+    });
+
+    // Mobile: show after 45 seconds if user has scrolled
+    setTimeout(function () {
+      if (!shown && hasScrolled) {
+        showPopup();
+      }
+    }, 45000);
+
+    function showPopup() {
+      if (shown) return;
+      shown = true;
+      popup.classList.add('active');
+      popup.setAttribute('aria-hidden', 'false');
+    }
+
+    function hidePopup() {
+      popup.classList.remove('active');
+      popup.setAttribute('aria-hidden', 'true');
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hidePopup);
+    }
+    if (overlay) {
+      overlay.addEventListener('click', hidePopup);
+    }
   }
 
 })();

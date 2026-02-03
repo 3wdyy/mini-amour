@@ -16,6 +16,7 @@
 /* ---- Section spacing ---- */
 .products,
 .bundles,
+.testimonials,
 .faq {
   padding-top: var(--sp-64);
   padding-bottom: var(--sp-64);
@@ -174,6 +175,7 @@
 @media (min-width: 768px) {
   .products,
   .bundles,
+  .testimonials,
   .faq {
     padding-top: var(--sp-80);
     padding-bottom: var(--sp-80);
