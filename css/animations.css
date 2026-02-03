@@ -37,15 +37,15 @@
 /* ---- Floating WhatsApp pulse ---- */
 @keyframes wa-pulse {
   0% {
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
   }
   50% {
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35),
-                0 0 0 8px rgba(37, 211, 102, 0.08);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3),
+                0 0 0 6px rgba(37, 211, 102, 0.08);
   }
   100% {
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35),
-                0 0 0 14px rgba(37, 211, 102, 0);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3),
+                0 0 0 10px rgba(37, 211, 102, 0);
   }
 }
 

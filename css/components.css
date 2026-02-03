@@ -208,6 +208,17 @@
 }
 
 /* ---- Countdown ---- */
+.countdown-heading {
+  font-family: var(--ff-body);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--clr-gold-muted);
+  margin-bottom: var(--sp-12);
+  text-align: center;
+}
+
 .hero-countdown {
   display: inline-flex;
   align-items: center;
@@ -413,6 +424,7 @@
 .products {
   background-color: var(--clr-bg);
   position: relative;
+  overflow: hidden;
 }
 
 /* Ambient glow behind product grid */
@@ -676,6 +688,12 @@
   border-top: 1px solid var(--clr-border);
 }
 
+.product-price-was {
+  font-size: var(--fs-sm);
+  color: var(--clr-muted);
+  text-decoration: line-through;
+}
+
 .product-price {
   font-family: var(--ff-display);
   font-size: var(--fs-lg);
@@ -745,6 +763,7 @@
 .bundles {
   background-color: var(--clr-surface);
   position: relative;
+  overflow: hidden;
 }
 
 /* Ambient glow */
@@ -935,6 +954,7 @@
   color: var(--clr-champagne);
   position: relative;
   overflow: hidden;
+  max-width: 100vw;
 }
 
 /* Aurora effect for final CTA */

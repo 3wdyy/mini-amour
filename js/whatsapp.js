@@ -8,7 +8,7 @@
 
   // ---- Configuration ----
   // Update this phone number when ready (UAE format, no +)
-  var WHATSAPP_PHONE = '971XXXXXXXXX';
+  var WHATSAPP_PHONE = '971561313346';
   var BASE_URL = 'https://wa.me/';
 
   // ---- Link builders ----
