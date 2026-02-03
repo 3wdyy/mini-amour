@@ -1083,18 +1083,18 @@
 /* ---- Floating WhatsApp ---- */
 .floating-whatsapp {
   position: fixed;
-  bottom: var(--sp-24);
-  right: var(--sp-24);
+  bottom: var(--sp-16);
+  right: var(--sp-16);
   z-index: var(--z-floating);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   background-color: var(--clr-success);
   color: var(--clr-ivory);
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
   transition: transform var(--dur-base) var(--ease-bounce),
               box-shadow var(--dur-base) var(--ease-out);
 }
