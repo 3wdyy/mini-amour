@@ -24,6 +24,7 @@
     initImageLoad();
     initGuideCards();
     initExitIntent();
+    initActiveNav();
   });
 
   // ============================================
@@ -207,10 +208,16 @@
       var diff = targetDate - now;
 
       if (diff <= 0) {
-        daysEl.textContent = '00';
-        hoursEl.textContent = '00';
-        minsEl.textContent = '00';
-        secsEl.textContent = '00';
+        // Replace countdown with post-event message
+        var wrap = document.querySelector('.countdown-wrap');
+        if (wrap) {
+          var heading = wrap.querySelector('.countdown-heading');
+          var subtext = wrap.querySelector('.countdown-subtext');
+          var timer = wrap.querySelector('.hero-countdown');
+          if (heading) heading.textContent = "Valentine\u2019s Day Is Here!";
+          if (subtext) subtext.textContent = 'Order now \u2014 same-day delivery available in Dubai & UAE';
+          if (timer) timer.style.display = 'none';
+        }
         return;
       }
 
@@ -326,7 +333,7 @@
     // Mobile: detect scroll-up pattern (user scrolling back toward top = leaving intent)
     var lastScrollY = 0;
     var scrollUpDistance = 0;
-    var scrollUpThreshold = 300;
+    var scrollUpThreshold = 600;
 
     window.addEventListener('scroll', function () {
       var currentY = window.scrollY;
@@ -366,6 +373,39 @@
     if (overlay) {
       overlay.addEventListener('click', hidePopup);
     }
+  }
+
+  // ============================================
+  // Active nav highlighting
+  // ============================================
+  function initActiveNav() {
+    var navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    if (!navLinks.length || !('IntersectionObserver' in window)) return;
+
+    var sections = [];
+    navLinks.forEach(function (link) {
+      var id = link.getAttribute('href').slice(1);
+      var section = document.getElementById(id);
+      if (section) sections.push({ el: section, link: link });
+    });
+
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          var match = sections.find(function (s) { return s.el === entry.target; });
+          if (!match) return;
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (l) { l.classList.remove('active'); });
+            match.link.classList.add('active');
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -60% 0px' }
+    );
+
+    sections.forEach(function (s) { observer.observe(s.el); });
   }
 
 })();
