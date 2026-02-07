@@ -223,6 +223,50 @@
   margin-left: var(--sp-4);
 }
 
+/* ---- Early Bird Callout ---- */
+.early-bird {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+  padding: var(--sp-16) var(--sp-24);
+  background: linear-gradient(135deg, rgba(107, 30, 58, 0.2) 0%, rgba(201, 165, 92, 0.15) 100%);
+  border: 1px solid rgba(201, 165, 92, 0.4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--sp-24);
+  text-align: center;
+  animation: early-bird-glow 2s ease-in-out infinite;
+}
+
+@keyframes early-bird-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201, 165, 92, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(201, 165, 92, 0.25), 0 0 60px rgba(107, 30, 58, 0.15); }
+}
+
+.early-bird-badge {
+  display: inline-block;
+  padding: var(--sp-4) var(--sp-12);
+  background: linear-gradient(135deg, var(--clr-rose) 0%, var(--clr-maroon) 100%);
+  color: var(--clr-ivory);
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.early-bird-text {
+  font-size: var(--fs-sm);
+  color: var(--clr-champagne);
+  line-height: var(--lh-relaxed);
+  margin: 0;
+}
+
+.early-bird-text strong {
+  color: var(--clr-gold);
+  font-weight: var(--fw-semibold);
+}
+
 .hero-actions {
   display: flex;
   flex-direction: column;
