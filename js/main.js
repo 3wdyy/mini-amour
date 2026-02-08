@@ -42,7 +42,8 @@
       'floating-whatsapp',
       'footer-whatsapp',
       'faq-whatsapp',
-      'exit-popup-whatsapp'
+      'exit-popup-whatsapp',
+      'sticky-whatsapp'
     ];
 
     generalIds.forEach(function (id) {
