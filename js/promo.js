@@ -27,6 +27,7 @@
     checkUrlParam();
     checkSessionStorage();
     initPromoForm();
+    initExitPopupApply();
   });
 
   // ============================================
@@ -85,6 +86,27 @@
     // Auto-uppercase input
     input.addEventListener('input', function () {
       input.value = input.value.toUpperCase();
+    });
+  }
+
+  // ============================================
+  // Initialize exit popup apply button
+  // ============================================
+  function initExitPopupApply() {
+    var exitApplyBtn = document.getElementById('exit-popup-apply');
+    var exitPopup = document.getElementById('exit-popup');
+
+    if (!exitApplyBtn) return;
+
+    exitApplyBtn.addEventListener('click', function () {
+      // Apply the code
+      applyPromoCode('AMOUR', false);
+
+      // Close the popup
+      if (exitPopup) {
+        exitPopup.classList.remove('active');
+        exitPopup.setAttribute('aria-hidden', 'true');
+      }
     });
   }
 
