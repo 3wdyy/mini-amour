@@ -1631,3 +1631,162 @@
     display: none;
   }
 }
+
+/* ---- Promo Code Section ---- */
+.promo-code-section {
+  margin-bottom: var(--sp-32);
+}
+
+.promo-code-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-12);
+  padding: var(--sp-24);
+  background: linear-gradient(135deg, rgba(201, 165, 92, 0.08) 0%, rgba(201, 165, 92, 0.04) 100%);
+  border: 1px solid rgba(201, 165, 92, 0.3);
+  border-radius: var(--radius-lg);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.promo-label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--clr-champagne);
+  text-align: center;
+  margin: 0;
+}
+
+.promo-input-wrap {
+  display: flex;
+  gap: var(--sp-8);
+  width: 100%;
+  max-width: 300px;
+}
+
+.promo-input {
+  flex: 1;
+  padding: var(--sp-12) var(--sp-16);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-champagne);
+  text-align: center;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  transition: all 0.3s var(--ease-out);
+}
+
+.promo-input::placeholder {
+  color: var(--clr-muted);
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: var(--fw-regular);
+}
+
+.promo-input:focus {
+  outline: none;
+  border-color: var(--clr-gold);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(201, 165, 92, 0.15);
+}
+
+.promo-input.shake {
+  animation: shake 0.5s ease-in-out;
+  border-color: var(--clr-rose);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.promo-btn {
+  flex-shrink: 0;
+  padding: var(--sp-12) var(--sp-20);
+}
+
+.promo-hint {
+  font-size: var(--fs-xs);
+  color: var(--clr-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* ---- Promo Success State ---- */
+.promo-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-12);
+  padding: var(--sp-20) var(--sp-24);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(37, 211, 102, 0.08) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  border-radius: var(--radius-lg);
+  max-width: 400px;
+  margin: 0 auto;
+  animation: promo-success-enter 0.5s var(--ease-out);
+}
+
+@keyframes promo-success-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.promo-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--clr-success);
+  color: var(--clr-ivory);
+  flex-shrink: 0;
+}
+
+.promo-success-text {
+  font-size: var(--fs-sm);
+  color: var(--clr-champagne);
+  margin: 0;
+}
+
+.promo-success-text strong {
+  color: var(--clr-success);
+  font-weight: var(--fw-bold);
+}
+
+/* ---- Price Update Animation ---- */
+.price-updated {
+  animation: price-pop 0.5s var(--ease-out);
+  color: var(--clr-success) !important;
+}
+
+@keyframes price-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Show strikethrough prices when promo is active */
+.promo-active .product-price-was,
+.promo-active .bundle-price-was {
+  display: inline !important;
+}
+
+/* ---- Updated WhatsApp Exclusive when promo active ---- */
+.promo-active .whatsapp-exclusive {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.15) 0%, rgba(37, 211, 102, 0.08) 100%);
+  border-color: rgba(37, 211, 102, 0.4);
+}
